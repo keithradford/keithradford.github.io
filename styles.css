@@ -303,7 +303,7 @@ li{
     width: 10rem;
     height: 10rem;
     border: 3px solid #7F0000;
-    background-color: #000000;
+    background-color:rgb(20, 20, 20, 1);
     margin-bottom: 2rem;
     display: flex;
     transform: rotate(45deg);
