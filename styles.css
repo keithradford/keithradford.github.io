@@ -203,6 +203,7 @@ li{
     background: linear-gradient(to bottom, #7F0000, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    line-height: 200px;
     padding: 1rem;
     user-select: none;
 }
@@ -512,6 +513,11 @@ input[type="submit"]:hover{
 }
 
 /* media queries */
+@media screen and (max-width: 1410px){
+    #nav{
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 768px){
     body{
         background: url("images/sitebg.jpeg") no-repeat center fixed;
