@@ -1,0 +1,29 @@
+{
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "googleapis": "^39.2.0",
+    "lodash": "^4.17.15"
+  },
+  "name": "keithradford.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keithradford/keithradford.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keithradford/keithradford.github.io/issues"
+  },
+  "homepage": "https://github.com/keithradford/keithradford.github.io#readme",
+  "description": ""
+}
