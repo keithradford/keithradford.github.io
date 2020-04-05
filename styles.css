@@ -499,6 +499,31 @@ input[type="submit"]:hover{
 }
 /* End footer  */
 
+/* Start scrollbar */
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    padding-top: 40px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
+    background-color: rgb(160, 33, 42);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 0.5px solid rgb(160, 33, 42);
+    width: 8px;
+    background: rgb(33, 33, 33);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background: rgb(24, 24, 24);
+}
+/* End scrollbar */
+
 /* Start animation */
 @keyframes pulse{
     0%{
