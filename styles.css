@@ -88,6 +88,10 @@ img{
 .has-margin-right{
     margin-right: 5rem;
 }
+
+.has-margin-left{
+    margin-left: 5rem;
+}
 /* End reusable */
 
 /* Start header */
@@ -302,18 +306,20 @@ li{
 .icon-container{
     width: 10rem;
     height: 10rem;
-    border: 3px solid #7F0000;
+    border: .5rem solid #7F0000;
+    transform: rotate(35deg);
     background-color:rgb(20, 20, 20, 1);
     margin-bottom: 2rem;
     display: flex;
-    transform: rotate(45deg);
+    box-shadow: 5px 10px 10px black;
+    z-index: 1000;
 }
 
 .icon-container i{
     color: #7F0000;
     font-size: 5rem;
     margin: auto;
-    transform: rotate(-45deg)
+    transform: rotate(-35deg)
 }
 /* End skills */
 
@@ -363,6 +369,10 @@ li{
 
 .portfolio-description .cta:hover{
     color: #2f67cd;
+}
+
+.portfolio-img > img{
+    border-radius: 25px;
 }
 
 /* End portfolio */
