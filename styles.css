@@ -312,7 +312,6 @@ li{
     margin-bottom: 2rem;
     display: flex;
     box-shadow: 5px 10px 10px black;
-    z-index: 1000;
 }
 
 .icon-container i{
