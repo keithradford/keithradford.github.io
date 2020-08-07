@@ -48,7 +48,7 @@ img{
 
 .section-heading{
     text-align: center;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 
 .section-heading h1{
@@ -259,11 +259,11 @@ li{
 }
 
 .social-media{
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .social-media i{
-    font-size: 5rem;
+    font-size: 6rem;
     transition: color 650ms;
 }
 
@@ -342,6 +342,10 @@ li{
 
 .portfolio-description{
     flex: 2;
+}
+
+.portfolio-description a{
+    margin-right: 2rem;
 }
 
 .portfolio-description h1{
