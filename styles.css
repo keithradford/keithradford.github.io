@@ -126,7 +126,7 @@ li{
 }
 
 .nav-list{
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 5rem;
     padding: 1rem;
 }
@@ -203,7 +203,7 @@ li{
 
 .landing-text h1{
     font-size: 20rem;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Bungee', cursive;
     background: linear-gradient(to bottom, #7F0000, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
