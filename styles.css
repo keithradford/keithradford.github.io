@@ -228,13 +228,11 @@ li{
 .about-heading{
     text-align: center;
     text-transform: uppercase;
-    line-height: 0;
     margin-bottom: 6rem;
 }
 
 .about-heading h1{
-    font-size: 10rem;
-    opacity: .3;
+    font-size: 5rem;
 }
 
 .about-heading h6{
