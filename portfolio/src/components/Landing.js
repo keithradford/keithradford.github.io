@@ -41,7 +41,7 @@ export default function Landing() {
     setChecked(true);
   }, []);
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="landing">
       <AppBar className={classes.topBar} elevation={0}>
         <Toolbar className={classes.topBarWrapper}>
           <h1 className={classes.topBarTitle}>
