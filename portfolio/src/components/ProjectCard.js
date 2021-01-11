@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     margin: "20px",
   },
   media: {
-    height: 140,
+    height: 120,
   },
   title: {
     fontFamily: "Open Sans",

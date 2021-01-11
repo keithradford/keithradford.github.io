@@ -4,13 +4,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
 import Landing from "./components/Landing";
 import Projects from "./components/Projects";
+import Header from "./components/Header";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: "100vh",
-    backgroundImage: `url(${process.env.PUBLIC_URL + "assets/sitebg.jpeg"})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    background: "#353535",
   },
 }));
 
@@ -19,6 +18,7 @@ function App() {
   return (
     <div className={classes.root}>
       <CssBaseline />
+      <Header />
       <Landing />
       <Projects />
     </div>

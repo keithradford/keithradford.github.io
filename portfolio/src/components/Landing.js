@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Collapse, IconButton, Toolbar } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
+import { Collapse } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -10,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     height: "100vh",
     fontFamily: "Open Sans",
+    backgroundImage: `url(${process.env.PUBLIC_URL + "assets/sitebg.jpeg"})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
   },
   topBar: {
     background: "none",
@@ -31,6 +33,15 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: "#fff",
     fontSize: "4.5rem",
+    textAlign: "center",
+    fontWeight: "bold",
+    marginBottom: "1rem",
+  },
+  caption: {
+    marginTop: "0",
+    color: "#fff",
+    fontSize: "1.1rem",
+    textAlign: "center",
   },
 }));
 
@@ -42,17 +53,6 @@ export default function Landing() {
   }, []);
   return (
     <div className={classes.root} id="landing">
-      <AppBar className={classes.topBar} elevation={0}>
-        <Toolbar className={classes.topBarWrapper}>
-          <h1 className={classes.topBarTitle}>
-            Keith <span className={classes.colorText}>Radford</span>
-          </h1>
-          <IconButton>
-            <MenuIcon className={classes.icon} />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-
       <Collapse
         in={checked}
         {...(checked ? { timeout: 1000 } : {})}
@@ -60,9 +60,11 @@ export default function Landing() {
       >
         <div>
           <h1 className={classes.title}>
-            Welcome to <br /> my{" "}
-            <span className={classes.colorText}>portfolio</span>
+            Keith <span className={classes.colorText}>Radford</span>
           </h1>
+          <h6 className={classes.caption}>
+            Software engineering student at the University of Victoria
+          </h6>
         </div>
       </Collapse>
     </div>
