@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontWeight: "bold",
   },
-  arrow: {
+  icon: {
     color: "#7F0000",
     fontSize: "4rem",
   },
@@ -80,7 +80,7 @@ export default function Landing() {
           </h6>
           <Scroll to="projects" smooth={true}>
             <IconButton id="down" size="small">
-              <KeyboardArrowDownIcon className={classes.arrow} />
+              <KeyboardArrowDownIcon className={classes.icon} />
             </IconButton>
           </Scroll>
         </div>
