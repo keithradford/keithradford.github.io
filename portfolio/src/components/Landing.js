@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Collapse } from "@material-ui/core";
+import { Collapse, IconButton } from "@material-ui/core";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import { Link as Scroll } from "react-scroll";
+
+import Header from "./Header";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,11 +41,19 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     marginBottom: "1rem",
   },
+  container: {
+    textAlign: "center",
+  },
   caption: {
     marginTop: "0",
     color: "#fff",
-    fontSize: "1.1rem",
+    fontSize: "1.3rem",
     textAlign: "center",
+    fontWeight: "bold",
+  },
+  arrow: {
+    color: "#7F0000",
+    fontSize: "4rem",
   },
 }));
 
@@ -53,18 +65,24 @@ export default function Landing() {
   }, []);
   return (
     <div className={classes.root} id="landing">
+      <Header />
       <Collapse
         in={checked}
         {...(checked ? { timeout: 1000 } : {})}
         collapsedHeight={50}
       >
-        <div>
+        <div className={classes.container}>
           <h1 className={classes.title}>
             Keith <span className={classes.colorText}>Radford</span>
           </h1>
           <h6 className={classes.caption}>
-            Software engineering student at the University of Victoria
+            Software Engineering Student at the University of Victoria
           </h6>
+          <Scroll to="projects" smooth={true}>
+            <IconButton id="down" size="small">
+              <KeyboardArrowDownIcon className={classes.arrow} />
+            </IconButton>
+          </Scroll>
         </div>
       </Collapse>
     </div>

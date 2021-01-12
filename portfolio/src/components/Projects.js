@@ -21,7 +21,7 @@ export default function Projects() {
   const classes = useStyles();
   const checked = useWindowPosition("landing");
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="projects">
       <div className={classes.container}>
         {/* TODO: Fetch project info from external source */}
         <ProjectCard
@@ -32,7 +32,7 @@ export default function Projects() {
           checked={checked}
         />
         <ProjectCard
-          image=""
+          image={process.env.PUBLIC_URL + "/assets/uvic.jpg"}
           title="UVic Course Scraper"
           desc="An NPM package for scraping UVic course information. Worked in a team of 4 as the team lead running and organizing weekly stand-ups and meetings to discuss the project. The package quickly provides developers with information on courses at UVic such as professors, meeting times, and seating numbers."
           code="https://github.com/VikeLabs/scheduler-scraper"
