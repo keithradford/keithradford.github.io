@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Open Sans",
     color: "#fff",
     fontSize: "2rem",
-    textAlign: "center",
   },
   container: {
     display: "flex",
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function Projects() {
   const classes = useStyles();
-  const checked = useWindowPosition("landing");
+  const checked = useWindowPosition("about");
   return (
     <div className={classes.root} id="projects">
       <div className={classes.container}>

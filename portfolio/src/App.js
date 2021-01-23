@@ -3,6 +3,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
 import Landing from "./components/Landing";
+import About from "./components/About";
 import Projects from "./components/Projects";
 
 const useStyles = makeStyles((theme) => ({
@@ -18,6 +19,7 @@ function App() {
     <div className={classes.root}>
       <CssBaseline />
       <Landing />
+      <About />
       <Projects />
     </div>
   );

@@ -17,6 +17,8 @@ import CodeIcon from "@material-ui/icons/Code";
 import FaceIcon from "@material-ui/icons/Face";
 import WorkIcon from "@material-ui/icons/Work";
 import MailIcon from "@material-ui/icons/Mail";
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import { Link as Scroll } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   topBar: {
@@ -36,6 +38,10 @@ const useStyles = makeStyles((theme) => ({
   },
   colorText: {
     color: "#7F0000",
+  },
+  upArrow: {
+    borderRadius: 8,
+    width: "100%",
   },
 }));
 
@@ -61,7 +67,7 @@ const StyledMenu = withStyles({
 
 const StyledMenuItem = withStyles((theme) => ({
   root: {
-    "&:focus": {
+    "&:hover": {
       backgroundColor: theme.palette.error.main,
       "& .MuiListItemIcon-root, & .MuiListItemText-primary": {
         color: theme.palette.common.black,
@@ -145,30 +151,37 @@ export default function HideAppBar(props) {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <StyledMenuItem>
+              <StyledMenuItem onClick={handleClose}>
                 <ListItemIcon>
                   <FaceIcon fontSize="small" />
                 </ListItemIcon>
                 <ListItemText primary="About Me" />
               </StyledMenuItem>
-              <StyledMenuItem>
-                <ListItemIcon>
-                  <CodeIcon fontSize="small" />
-                </ListItemIcon>
-                <ListItemText primary="Projects" />
-              </StyledMenuItem>
-              <StyledMenuItem>
+              <Scroll to="projects" smooth={true}>
+                <StyledMenuItem onClick={handleClose}>
+                  <ListItemIcon>
+                    <CodeIcon fontSize="small" />
+                  </ListItemIcon>
+                  <ListItemText primary="Projects" />
+                </StyledMenuItem>
+              </Scroll>
+              <StyledMenuItem onClick={handleClose}>
                 <ListItemIcon>
                   <WorkIcon fontSize="small" />
                 </ListItemIcon>
                 <ListItemText primary="Experience" />
               </StyledMenuItem>
-              <StyledMenuItem>
+              <StyledMenuItem onClick={handleClose}>
                 <ListItemIcon>
                   <MailIcon fontSize="small" />
                 </ListItemIcon>
                 <ListItemText primary="Contact" />
               </StyledMenuItem>
+              <Scroll to="landing" smooth={true} onClick={handleClose}>
+                <IconButton size="large" className={classes.upArrow}>
+                  <KeyboardArrowUpIcon fontSize="small" />
+                </IconButton>
+              </Scroll>
             </StyledMenu>
           </Toolbar>
         </AppBar>
