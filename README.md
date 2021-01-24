@@ -1,3 +1,3 @@
 # My portfolio
 
-TODO: Add to README
+TODO: Add to README.
