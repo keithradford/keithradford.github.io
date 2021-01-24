@@ -169,12 +169,6 @@ export default function HideAppBar(props) {
               </Scroll>
               <StyledMenuItem onClick={handleClose}>
                 <ListItemIcon>
-                  <WorkIcon fontSize="small" />
-                </ListItemIcon>
-                <ListItemText primary="Experience" />
-              </StyledMenuItem>
-              <StyledMenuItem onClick={handleClose}>
-                <ListItemIcon>
                   <MailIcon fontSize="small" />
                 </ListItemIcon>
                 <ListItemText primary="Contact" />

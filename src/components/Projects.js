@@ -1,6 +1,5 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
-import useWindowPosition from "../hook/useWindowPosition";
 import ProjectCard from "./ProjectCard";
 
 const useStyles = makeStyles((theme) => ({
@@ -25,9 +24,11 @@ const useStyles = makeStyles((theme) => ({
     color: "#7F0000",
   },
 }));
+
+
 export default function Projects() {
   const classes = useStyles();
-  const checked = useWindowPosition("projects");
+
   return (
     <div className={classes.root} id="projects">
       <div className={classes.title}>
@@ -42,14 +43,14 @@ export default function Projects() {
           title="Terminal Chess"
           desc="Using the codebase of one of my first coding projects, snake played completely through the terminal, I've developed the game of chess played in a similar style. This project took the existing codebase and introduced better development practices such as testing, better code structure, and cleaner code."
           code="https://github.com/keithradford/terminal-chess"
-          checked={checked}
+          tech="Java, JUnit"
         />
         <ProjectCard
           image={process.env.PUBLIC_URL + "/assets/uvic.jpg"}
           title="UVic Course Scraper"
           desc="An NPM package for scraping UVic course information. Worked in a team of 4 as the team lead running and organizing weekly stand-ups and meetings to discuss the project. The package quickly provides developers with information on courses at UVic such as professors, meeting times, and seating numbers."
           code="https://github.com/VikeLabs/scheduler-scraper"
-          checked={checked}
+          tech="TypeScript, Jest, Node, Cheerio"
         />
       </div>
     </div>

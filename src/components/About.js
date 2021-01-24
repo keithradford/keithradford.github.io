@@ -24,12 +24,16 @@ const useStyles = makeStyles((theme) => ({
   picture: {
     borderRadius: "50%",
     margin: "20px",
-    boxShadow: "-8px -2px 5px #000"
   },
   text: {
     width: "50%",
     height: "25%",
-    marginLeft: "25px"
+    marginLeft: "25px",
+    color: "#000",
+    background: "#fff",
+    border: "5px solid #fff",
+    borderRadius: "25px",
+    padding: "20px"
   },
   colorText: {
     color: "#7F0000",
@@ -40,7 +44,7 @@ export default function Projects() {
   const classes = useStyles();
   return (
     <div className={classes.root} id="about">
-      <div className={classes.title}>
+      <div className={classes.title} id="aboutTitle">
         <h1>
           About <span className={classes.colorText}>Me</span>
         </h1>
@@ -60,7 +64,12 @@ export default function Projects() {
           Software Engineering and begin to learn, study, and work in the field of computer science.
         </p>
       </div>
-      <WorkTimeline />
+      <div id="timeline">
+        <h2 className={classes.title}>
+          <span className={classes.colorText}>My</span> Experience
+        </h2>
+        <WorkTimeline />
+      </div>
     </div>
   );
 }

@@ -22,3 +22,17 @@
     box-shadow: 0 0 0 0 rgba(127, 0, 0, 0);
   }
 }
+
+/* Start footer  */
+.copyright{
+  width: 100%;
+  text-align: center;
+  background-color: #353535;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.copyright p{
+  font-size: 1.4rem;
+}
+/* End footer  */
