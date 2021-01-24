@@ -15,12 +15,26 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
+  title: {
+    marginTop: "50px",
+    marginbottom: "10px",
+    textAlign: "center",
+    fontSize: "2.5rem",
+  },
+  colorText: {
+    color: "#7F0000",
+  },
 }));
 export default function Projects() {
   const classes = useStyles();
-  const checked = useWindowPosition("about");
+  const checked = useWindowPosition("projects");
   return (
     <div className={classes.root} id="projects">
+      <div className={classes.title}>
+        <h1>
+          <span className={classes.colorText}>Projects</span> and Contributions
+        </h1>
+      </div>
       <div className={classes.container}>
         {/* TODO: Fetch project info from external source */}
         <ProjectCard

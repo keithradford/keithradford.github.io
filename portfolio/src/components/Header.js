@@ -151,12 +151,14 @@ export default function HideAppBar(props) {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <StyledMenuItem onClick={handleClose}>
-                <ListItemIcon>
-                  <FaceIcon fontSize="small" />
-                </ListItemIcon>
-                <ListItemText primary="About Me" />
-              </StyledMenuItem>
+              <Scroll to="about" smooth={true}>
+                <StyledMenuItem onClick={handleClose}>
+                  <ListItemIcon>
+                    <FaceIcon fontSize="small" />
+                  </ListItemIcon>
+                  <ListItemText primary="About Me" />
+                </StyledMenuItem>
+              </Scroll>
               <Scroll to="projects" smooth={true}>
                 <StyledMenuItem onClick={handleClose}>
                   <ListItemIcon>
