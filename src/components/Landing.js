@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     height: "100vh",
     fontFamily: "Open Sans",
-    backgroundImage: `url(${process.env.PUBLIC_URL + "assets/sitebg.jpeg"})`,
+    backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/sitebg.jpeg"})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   },
