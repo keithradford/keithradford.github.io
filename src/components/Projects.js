@@ -15,14 +15,20 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   title: {
-    marginTop: "50px",
+    marginTop: "200px",
     marginbottom: "10px",
     textAlign: "center",
     fontSize: "2.5rem",
+    lineHeight: "75px"
   },
   colorText: {
     color: "#7F0000",
   },
+  line: {
+    width: "25%",
+    color: "#000",
+    marginBottom: "2.5%"
+  }
 }));
 
 
@@ -35,6 +41,7 @@ export default function Projects() {
         <h1>
           <span className={classes.colorText}>Projects</span> and Contributions
         </h1>
+        <hr className={classes.line} />
       </div>
       <div className={classes.container}>
         {/* TODO: Fetch project info from external source */}
