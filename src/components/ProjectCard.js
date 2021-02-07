@@ -7,13 +7,13 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import { withStyles } from '@material-ui/core/styles';
-import Dialog from '@material-ui/core/Dialog';
-import MuiDialogTitle from '@material-ui/core/DialogTitle';
-import MuiDialogContent from '@material-ui/core/DialogContent';
-import MuiDialogActions from '@material-ui/core/DialogActions';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
+import { withStyles } from "@material-ui/core/styles";
+import Dialog from "@material-ui/core/Dialog";
+import MuiDialogTitle from "@material-ui/core/DialogTitle";
+import MuiDialogContent from "@material-ui/core/DialogContent";
+import MuiDialogActions from "@material-ui/core/DialogActions";
+import IconButton from "@material-ui/core/IconButton";
+import CloseIcon from "@material-ui/icons/Close";
 
 const useStyles = makeStyles({
   root: {
@@ -36,8 +36,8 @@ const useStyles = makeStyles({
     width: "100%",
     height: "50%",
     objectFit: "cover",
-    marginBottom: "25px"
-  }
+    marginBottom: "25px",
+  },
 });
 
 const styles = (theme) => ({
@@ -46,7 +46,7 @@ const styles = (theme) => ({
     padding: theme.spacing(2),
   },
   closeButton: {
-    position: 'absolute',
+    position: "absolute",
     right: theme.spacing(1),
     top: theme.spacing(1),
     color: theme.palette.grey[500],
@@ -59,7 +59,11 @@ const DialogTitle = withStyles(styles)((props) => {
     <MuiDialogTitle disableTypography className={classes.root} {...other}>
       <Typography variant="h6">{children}</Typography>
       {onClose ? (
-        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+        <IconButton
+          aria-label="close"
+          className={classes.closeButton}
+          onClick={onClose}
+        >
           <CloseIcon />
         </IconButton>
       ) : null}
@@ -118,23 +122,23 @@ export default function ProjectCard(props) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+      <Dialog
+        onClose={handleClose}
+        aria-labelledby="customized-dialog-title"
+        open={open}
+      >
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
           {props.title}
         </DialogTitle>
         <DialogContent dividers>
           <img src={props.image} className={classes.image} />
-          <Typography gutterBottom>
-            {props.desc}
-          </Typography>
+          <Typography gutterBottom>{props.desc}</Typography>
         </DialogContent>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
           Technologies used
         </DialogTitle>
         <DialogContent>
-          <Typography gutterBottom>
-            {props.tech}
-          </Typography>
+          <Typography gutterBottom>{props.tech}</Typography>
         </DialogContent>
         <DialogActions>
           <Button autoFocus color="primary" href={props.code} target="_blank">
@@ -146,11 +150,21 @@ export default function ProjectCard(props) {
         <Button
           size="small"
           color="primary"
-          href={props.code}
+          href={props.links[0]}
           target="_blank"
         >
           View the code
+        </Button>
+        {props.links[1] ? (
+          <Button
+            size="small"
+            color="primary"
+            href={props.links[1]}
+            target="_blank"
+          >
+            NPM package
           </Button>
+        ) : null}
       </CardActions>
     </Card>
   );
