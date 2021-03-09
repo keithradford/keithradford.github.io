@@ -1,5 +1,5 @@
-function App() {
-  return <div>yo</div>;
-}
+import { Landing } from "./app/landing/Landing";
 
-export default App;
+export function App(): JSX.Element | null {
+  return <Landing />;
+}
