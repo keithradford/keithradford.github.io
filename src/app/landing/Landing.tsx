@@ -60,7 +60,7 @@ export function Landing(): JSX.Element | null {
       >
         Software Engineering Student at the University of Victoria
       </Heading>
-      <Scroll to="projects" smooth={true}>
+      <Scroll to="info" smooth={true}>
         <IconButton
           mt="2.3rem"
           aria-label="scroll-button"
