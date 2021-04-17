@@ -1,8 +1,5 @@
-import { Landing } from "./app/landing/Landing";
-import { Projects } from "./app/projects/Projects";
-import { Work } from "./app/work/Work";
 import { Box } from "@chakra-ui/react";
-import { About } from "./app/about/About";
+import { Work, Projects, About, Landing } from "./components";
 
 export function App(): JSX.Element | null {
   return (
