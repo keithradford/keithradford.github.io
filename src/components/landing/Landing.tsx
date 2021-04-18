@@ -1,7 +1,6 @@
-import { Heading, Flex, IconButton, HStack, Spacer } from "@chakra-ui/react";
+import { Heading, Flex, IconButton, HStack } from "@chakra-ui/react";
 import { Link as Scroll } from "react-scroll";
 import { VscChevronDown } from "react-icons/vsc";
-import { FaLinkedinIn, FaGithubAlt } from "react-icons/fa";
 
 export function Landing(): JSX.Element | null {
   return (
@@ -26,31 +25,6 @@ export function Landing(): JSX.Element | null {
         >
           Keith Radford
         </Heading>
-        <IconButton
-          id="social"
-          aria-label="github"
-          icon={<FaGithubAlt />}
-          size="lg"
-          isRound
-          colorScheme="whiteAlpha"
-          fontSize="30px"
-          as="a"
-          href="https://github.com/keithradford"
-          target="_blank"
-        />
-        <Spacer />
-        <IconButton
-          id="social"
-          aria-label="linkedin"
-          icon={<FaLinkedinIn />}
-          size="lg"
-          isRound
-          colorScheme="whiteAlpha"
-          fontSize="30px"
-          as="a"
-          href="https://www.linkedin.com/in/keith-radford/"
-          target="_blank"
-        />
       </HStack>
       <Heading
         fontSize="1.3rem"
