@@ -20,22 +20,21 @@ export const projects: Project[] = [
       "uvic-course-scraper is an NPM package developed by a team of UVic students with the goal of scraping UVic course data into a clean program-friendly format. Developed using the package Cheerio, we were able to parse UVic's HTML and expose to users of the package easy-to-use functions which provide various different types of data regarding courses.",
   },
   {
-    name: "clockwork",
+    name: "CourseUp",
     languages: ["React", "TypeScript", "Firebase", "Chakra UI"],
-    slogan:
-      "simplify the experience of searching courses and building timetables",
+    slogan: "an open source timetable builder for UVic",
     links: [
       {
         name: "github",
-        link: "https://github.com/VikeLabs/clockwork",
+        link: "https://github.com/VikeLabs/courseup",
       },
       {
         name: "website",
-        link: "https://clockwork.vikelabs.dev/",
+        link: "https://courseup.vikelabs.ca/",
       },
     ],
     description:
-      "clockwork is a website developed by a team of UVic students to improve the flow of viewing course information and building timetables for UVic. As it stands, students must visit three separate pages to view all the relevant information for a given course and it's sections. We built a simplified single-page view for every course at UVic which quickly displays students the information they want to see. The website acted as a way for us to gain experience in full-stack development, the importance of UI and UX, and working as a team using project management tools, participating in code review, and more.",
+      "CourseUp is a website developed by a team of UVic students to improve the flow of viewing course information and building timetables for UVic. As it stands, students must visit three separate pages to view all the relevant information for a given course and it's sections. We built a simplified single-page view for every course at UVic which quickly displays students the information they want to see. The website acted as a way for us to gain experience in full-stack development, the importance of UI and UX, and working as a team using project management tools, participating in code review, and more.",
   },
   {
     name: "Terminal Chess",

@@ -63,9 +63,7 @@ export function Dropdown({ work }: Props) {
               </Link>
             );
           })}
-          <Text pb="15px" pt="5px">
-            {work.description}
-          </Text>
+          <Text pt="10px">{work.description}</Text>
           <HStack pt="3px" flexWrap="wrap">
             {work.skills.map((skills) => {
               return (

@@ -60,7 +60,7 @@ export function Dropdown({ project }: Props) {
               </Link>
             );
           })}
-          <Text py="10px">{project.description}</Text>
+          <Text pt="10px">{project.description}</Text>
           <HStack pt="3px" flexWrap="wrap">
             {project.languages.map((language) => {
               return (
