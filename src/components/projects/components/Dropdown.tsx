@@ -22,7 +22,7 @@ export function Dropdown({ project }: Props) {
 
   const handleToggle = () => setShow(!show);
   return (
-    <Box w="100%">
+    <Box w="100%" minW="fit-content">
       <Button
         onClick={handleToggle}
         mt="1px"
@@ -30,20 +30,21 @@ export function Dropdown({ project }: Props) {
         py="30px"
         borderRadius="0"
         alignContent="left"
-        _focus={{
-          border: "none",
-        }}
       >
         <Flex align="left" w="100%">
           <Text as="strong">{project.name}</Text>
-          <Text mx="5px">-</Text>
-          <Text color="gray.900">{project.slogan}</Text>
+          <Text mx="5px" display={{ base: "none", lg: "initial" }}>
+            -
+          </Text>
+          <Text color="gray.900" display={{ base: "none", lg: "initial" }}>
+            {project.slogan}
+          </Text>
           <Spacer />
           {show ? <VscChevronUp /> : <VscChevronDown />}
         </Flex>
       </Button>
       <Collapse in={show}>
-        <Box bg="white" px="15px" pb="15px">
+        <Box bg="white" px="15px">
           {project.links.map((link) => {
             return (
               <Link
@@ -59,13 +60,17 @@ export function Dropdown({ project }: Props) {
               </Link>
             );
           })}
-          <Text pb="15px" pt="5px">
-            {project.description}
-          </Text>
-          <HStack>
+          <Text py="10px">{project.description}</Text>
+          <HStack pt="3px" flexWrap="wrap">
             {project.languages.map((language) => {
               return (
-                <Badge bgColor="#EE495A" color="white" p="5px">
+                <Badge
+                  bgColor="#EE495A"
+                  color="white"
+                  p="5px"
+                  w="fit-content"
+                  h="fit-content"
+                >
                   {language}
                 </Badge>
               );

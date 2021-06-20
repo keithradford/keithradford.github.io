@@ -1,4 +1,4 @@
-import { Heading, Flex, IconButton, HStack } from "@chakra-ui/react";
+import { Heading, Flex, IconButton, VStack } from "@chakra-ui/react";
 import { Link as Scroll } from "react-scroll";
 import { VscChevronDown } from "react-icons/vsc";
 
@@ -14,7 +14,7 @@ export function Landing(): JSX.Element | null {
       flexDirection="column"
       color="white"
     >
-      <HStack mt="1rem">
+      <VStack w="75%">
         <Heading
           as="h1"
           fontSize="4.5rem"
@@ -25,15 +25,15 @@ export function Landing(): JSX.Element | null {
         >
           Keith Radford
         </Heading>
-      </HStack>
-      <Heading
-        fontSize="1.3rem"
-        fontWeight="bold"
-        mt="0"
-        fontFamily="Open Sans"
-      >
-        Software Engineering Student at the University of Victoria
-      </Heading>
+        <Heading
+          fontSize="1.3rem"
+          fontWeight="bold"
+          mt="0"
+          fontFamily="Open Sans"
+        >
+          Software Engineering Student at the University of Victoria
+        </Heading>
+      </VStack>
       <Scroll to="info" smooth={true}>
         <IconButton
           mt="2.3rem"

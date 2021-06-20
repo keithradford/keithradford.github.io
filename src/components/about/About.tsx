@@ -1,12 +1,12 @@
 import {
   Image,
   Center,
-  HStack,
   Text,
   Spacer,
   Link,
   VStack,
   Heading,
+  Flex,
 } from "@chakra-ui/react";
 import { Social } from "./components/Social";
 
@@ -17,14 +17,21 @@ export function About() {
         <Heading as="h3" fontFamily="Open Sans" fontWeight="bold" color="white">
           About Me
         </Heading>
-        <HStack>
+        <Flex
+          direction={{ base: "column", lg: "row" }}
+          justifyContent="center"
+          alignItems="center"
+        >
           <Image
             src={`${process.env.PUBLIC_URL + "/assets/keith.JPG"}`}
-            h="250px"
+            maxH="250px"
+            maxW="250px"
+            mr="1em"
+            mb="1em"
           />
           <Spacer />
-          <VStack color="whitesmoke" w="75%">
-            <Text>
+          <VStack color="whitesmoke">
+            <Text w={{ base: "15em", md: "40em", lg: "45em" }} mb="1em">
               My name's Keith and I'm a student and software developer with an
               interest in making tools to help others. I'm from Victoria, BC and
               currently studying Software Engineering at UVic.
@@ -59,7 +66,7 @@ export function About() {
             </Text>
             <Social />
           </VStack>
-        </HStack>
+        </Flex>
       </VStack>
     </Center>
   );

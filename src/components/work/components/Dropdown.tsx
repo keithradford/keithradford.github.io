@@ -36,14 +36,18 @@ export function Dropdown({ work }: Props) {
       >
         <Flex align="left" w="100%">
           <Text as="strong">{work.company}</Text>
-          <Text mx="5px">-</Text>
-          <Text color="gray.900">{work.position}</Text>
+          <Text mx="5px" display={{ base: "none", lg: "initial" }}>
+            -
+          </Text>
+          <Text color="gray.900" display={{ base: "none", lg: "initial" }}>
+            {work.position}
+          </Text>
           <Spacer />
           {show ? <VscChevronUp /> : <VscChevronDown />}
         </Flex>
       </Button>
       <Collapse in={show}>
-        <Box bg="white" px="15px" pb="15px">
+        <Box bg="white" px="15px">
           {work.links.map((link) => {
             return (
               <Link
@@ -62,10 +66,16 @@ export function Dropdown({ work }: Props) {
           <Text pb="15px" pt="5px">
             {work.description}
           </Text>
-          <HStack>
+          <HStack pt="3px" flexWrap="wrap">
             {work.skills.map((skills) => {
               return (
-                <Badge bgColor="#EE495A" color="white" p="5px">
+                <Badge
+                  bgColor="#EE495A"
+                  color="white"
+                  p="5px"
+                  w="fit-content"
+                  h="fit-content"
+                >
                   {skills}
                 </Badge>
               );

@@ -23,9 +23,6 @@ function SocialButton({ link, icon, label }: Props): JSX.Element {
       href={link}
       target="_blank"
       _hover={{ bgColor: "#EE495A" }}
-      _focus={{
-        border: "none",
-      }}
     />
   );
 }
