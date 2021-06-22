@@ -10,7 +10,7 @@ export function Landing(): JSX.Element | null {
       h="100vh"
       bgRepeat="no-repeat"
       bgSize="cover"
-      bgImg={`url(${process.env.PUBLIC_URL + "/assets/background.jpg"})`}
+      // bgImg={`url(${process.env.PUBLIC_URL + "/assets/background.jpg"})`}
       flexDirection="column"
       color="white"
     >

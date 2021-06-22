@@ -43,22 +43,24 @@ export function About() {
               Check me out on the various networks linked below, take a look at
               my{" "}
               <Link
-                color="#EE495A"
+                color="#aaaaaa"
                 href={`${process.env.PUBLIC_URL + "/assets/resume.pdf"}`}
                 target="_blank"
                 _focus={{
                   border: "none",
                 }}
+                textDecor="underline"
               >
                 resume
               </Link>
               , send me an email at{" "}
               <Link
-                color="#EE495A"
+                color="#aaaaaa"
                 href="mailto:khr8771@gmail.com"
                 _focus={{
                   border: "none",
                 }}
+                textDecor="underline"
               >
                 khr8771@gmail.com
               </Link>
