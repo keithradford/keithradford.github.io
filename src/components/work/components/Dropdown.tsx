@@ -30,9 +30,6 @@ export function Dropdown({ work }: Props) {
         py="30px"
         borderRadius="0"
         alignContent="left"
-        _focus={{
-          border: "none",
-        }}
       >
         <Flex align="left" w="100%">
           <Text as="strong">{work.company}</Text>
@@ -47,7 +44,7 @@ export function Dropdown({ work }: Props) {
         </Flex>
       </Button>
       <Collapse in={show}>
-        <Box bg="white" px="15px">
+        <Box bg="white" p="15px" h="fit-content">
           {work.links.map((link) => {
             return (
               <Link
@@ -63,8 +60,8 @@ export function Dropdown({ work }: Props) {
               </Link>
             );
           })}
-          <Text pt="10px">{work.description}</Text>
-          <HStack pt="3px" flexWrap="wrap">
+          <Text my="10px">{work.description}</Text>
+          <HStack flexWrap="wrap">
             {work.skills.map((skills) => {
               return (
                 <Badge
@@ -72,7 +69,8 @@ export function Dropdown({ work }: Props) {
                   color="white"
                   p="5px"
                   w="fit-content"
-                  h="fit-content"
+                  h="100%"
+                  mb="5px"
                 >
                   {skills}
                 </Badge>

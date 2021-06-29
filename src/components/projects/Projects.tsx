@@ -5,7 +5,13 @@ import { projects } from "./static";
 export function Projects() {
   return (
     <VStack alignContent="center" w="70%" mx="auto" align="left" mt="10rem">
-      <Heading as="h3" fontFamily="Open Sans" fontWeight="bold" color="white">
+      <Heading
+        as="h3"
+        fontFamily="Open Sans"
+        fontWeight="bold"
+        color="white"
+        textAlign={{ base: "center", lg: "left" }}
+      >
         Projects and Contributions
       </Heading>
       {projects.map((project) => {

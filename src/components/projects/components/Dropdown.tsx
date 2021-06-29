@@ -44,7 +44,7 @@ export function Dropdown({ project }: Props) {
         </Flex>
       </Button>
       <Collapse in={show}>
-        <Box bg="white" px="15px">
+        <Box bg="white" p="15px" h="fit-content">
           {project.links.map((link) => {
             return (
               <Link
@@ -60,8 +60,8 @@ export function Dropdown({ project }: Props) {
               </Link>
             );
           })}
-          <Text pt="10px">{project.description}</Text>
-          <HStack pt="3px" flexWrap="wrap">
+          <Text my="10px">{project.description}</Text>
+          <HStack flexWrap="wrap">
             {project.languages.map((language) => {
               return (
                 <Badge
@@ -69,7 +69,8 @@ export function Dropdown({ project }: Props) {
                   color="white"
                   p="5px"
                   w="fit-content"
-                  h="fit-content"
+                  h="100%"
+                  mb="5px"
                 >
                   {language}
                 </Badge>

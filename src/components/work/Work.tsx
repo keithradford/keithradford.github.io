@@ -5,7 +5,13 @@ import { work } from "./static";
 export function Work() {
   return (
     <VStack alignContent="center" w="70%" mx="auto" align="left" my="10rem">
-      <Heading as="h3" fontFamily="Open Sans" fontWeight="bold" color="white">
+      <Heading
+        as="h3"
+        fontFamily="Open Sans"
+        fontWeight="bold"
+        color="white"
+        textAlign={{ base: "center", lg: "left" }}
+      >
         Work Experience
       </Heading>
       {work.map((job) => {

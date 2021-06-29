@@ -10,7 +10,6 @@ export function Landing(): JSX.Element | null {
       h="100vh"
       bgRepeat="no-repeat"
       bgSize="cover"
-      // bgImg={`url(${process.env.PUBLIC_URL + "/assets/background.jpg"})`}
       flexDirection="column"
       color="white"
     >
@@ -34,7 +33,7 @@ export function Landing(): JSX.Element | null {
           Software Engineering Student at the University of Victoria
         </Heading>
       </VStack>
-      <Scroll to="info" smooth={true}>
+      <Scroll to="content" smooth={true}>
         <IconButton
           mt="2.3rem"
           aria-label="scroll-button"

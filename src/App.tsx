@@ -6,15 +6,15 @@ export function App(): JSX.Element | null {
     <Box
       bg="#353535"
       bgImage={`url(${
-        process.env.PUBLIC_URL + "/assets/large_background.png"
+        process.env.PUBLIC_URL + "/assets/large_background.gif"
       })`}
       bgRepeat="no-repeat"
       bgSize="cover"
       bgPos="center center"
     >
       <Landing />
-      <About />
-      <Box minH="100vh" id="info">
+      <Box minH="100vh" id="content">
+        <About />
         <Projects />
         <Work />
       </Box>
