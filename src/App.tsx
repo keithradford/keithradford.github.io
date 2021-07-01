@@ -6,7 +6,7 @@ export function App(): JSX.Element | null {
     <Box
       bg="#353535"
       bgImage={`url(${
-        process.env.PUBLIC_URL + "/assets/large_background.gif"
+        process.env.PUBLIC_URL + "/assets/scaled_background.png"
       })`}
       bgRepeat="no-repeat"
       bgSize="cover"
